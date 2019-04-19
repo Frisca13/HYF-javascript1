@@ -1,0 +1,656 @@
+# WEEK 2
+
+## 73. Selecting from Many Options with Switch Statements
+```js
+function caseInSwitch(val) {
+  var answer = "";
+  // Only change code below this line
+  switch(val) {
+  case 1:
+    return "alpha";
+    break;
+  case 2:
+    return "beta";
+    break;
+  case 3:
+    return "gamma";
+    break;
+     case 4:
+   return "delta";
+    break;
+}
+  // Only change code above this line  
+  return answer;  
+}
+
+// Change this value to test
+caseInSwitch(1);
+caseInSwitch(2);
+caseInSwitch(3);
+caseInSwitch(4);
+```
+
+## 74. Adding a Default Option in Switch Statements
+```js
+function switchOfStuff(val) {
+  var answer = "";
+    switch(val) {
+  case "a":
+    answer = "apple";
+    break;
+  case "b":
+    answer = "bird";
+    break;
+  case "c":
+    answer = "cat";
+    break;
+  default:
+   answer = "stuff";
+}
+
+  return answer;
+}
+
+switchOfStuff(1);
+```
+
+## 75. Multiple Identical Options in Switch Statements
+```js
+ function sequentialSizes(val) {
+  var answer = "";
+  switch(val) {
+  case 1:
+  case 2:
+  case 3:
+    answer = "Low";
+    break;
+  case 4:
+  case 5:
+  case 6:
+    answer = "Mid";
+    break;
+  case 7:
+  case 8:
+  case 9:
+    answer = "High";
+}
+  return answer;
+}
+
+sequentialSizes(1);
+
+```
+
+## 76. Replacing If Else Chains with Switch
+```js
+function chainToSwitch(val) {
+  var answer = "";
+
+  switch(val) {
+  case "bob":
+    answer = "Marley";
+    break;
+  case 42:
+    answer = "The Answer";
+    break;
+  case 1:
+    answer = "There is no #1";
+    break;
+  case 99:
+    answer = "Missed me by this much!";
+    break;
+  case 7:
+    answer = "Ate Nine";
+    break;
+  default:
+    answer = "";
+    break;
+}
+
+  return answer;
+}
+
+chainToSwitch(7);
+```
+
+## 77. Returning Boolean Values from Functions
+```js
+function isLess(a, b) {
+  // Fix this code
+
+  return a < b;
+}
+
+// Change these values to test
+isLess(10, 15);
+```
+
+## 78. Return Early Pattern for Functions
+```js
+function abTest(a, b) {
+ if (a < 0 || b < 0) {
+   return undefined;
+ }else{
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+}
+abTest(2,2);
+```
+
+## 79. Counting Cards
+```js
+var count = 0;
+function cc(card) {
+switch(card){
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;
+      break;
+  }
+  if (count > 0){
+    return count + " Bet";
+  } else {
+    return count + " Hold";
+  }
+}var count = 0; 
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+```
+
+## 80. Build Javascript Object
+```js
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+// Only change code below this line.
+
+var myDog = {
+    "name": "Brownie",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["me"]
+};
+```
+
+## 81. Accessing Object Properties with Dot Notation
+```js
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+```
+
+## 82. Accessing Object Properties with Bracket Notation
+```js
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+var entreeValue = testObj["an entree"];
+var drinkValue = testObj["the drink"];
+```
+
+## 83. Accessing Object Properties with Variables
+```js
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+var playerNumber = 16;
+var player = testObj[playerNumber];
+```
+
+## 84. Updating Object Properties
+```js
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog.name = "Happy Coder";
+```
+
+## 85. Add New Properties to a JavaScript Object
+```js
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+
+myDog["bark"] = "woof";
+```
+
+## 86. Delete Properties from a JavaScript Object
+```js
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"],
+  "bark": "bow-wow"
+};
+
+delete ourDog.bark;
+
+// Setup
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+// Only change code below this line.
+delete myDog.tails;
+```
+
+## 87. Using Objects for Lookups
+```js
+function phoneticLookup(val) {
+  var result = "";
+
+  var lookup = {
+ "alpha": "Adams",
+  "bravo": "Boston",
+  "charlie": "Chicago",
+  "delta": "Denver",
+  "echo": "Easy",
+  "foxtrot": "Frank"
+  };
+  result = lookup[val];
+  return result;
+}
+
+phoneticLookup("charlie");
+```
+
+## 88. Testing Objects for Properties
+```js
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+ return myObj.hasOwnProperty(checkProp) ? myObj[checkProp]: "Not Found";
+}
+
+checkObj("gift");
+```
+
+## 89. Manipulating Complex Objects
+```js
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  {
+
+   "artist": "JLO",
+    "title": "Girl",
+    "release_year": 1999,
+    "formats": [
+      "Vinnyl",
+      "8T",
+      "LP"
+    ]
+  }
+];
+```
+
+## 90. Accessing Nested Objects
+```js
+// Setup
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"]; // Change this line
+```
+
+## 91. Accessing Nested Arrays
+```js
+// Setup
+var myPlants = [
+  { 
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }  
+];
+
+// Only change code below this line
+
+var secondTree = myPlants[1].list[1]; // Change this line
+```
+
+## 92. Record Collection
+```js
+var collection = {
+    "2548": {
+      "album": "Slippery When Wet",
+      "artist": "Bon Jovi",
+      "tracks": [
+        "Let It Rock",
+        "You Give Love a Bad Name"
+      ]
+    },
+    "2468": {
+      "album": "1999",
+      "artist": "Prince",
+      "tracks": [
+        "1999",
+        "Little Red Corvette"
+      ]
+    },
+    "1245": {
+      "artist": "Robert Palmer",
+      "tracks": [ ]
+    },
+    "5439": {
+      "album": "ABBA Gold"
+    }
+};
+// Keep a copy of the collection for tests
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+
+function updateRecords(id, prop, value) {
+  if (prop === "tracks" && value !== ""){
+    if (collection[id][prop]){
+      collection[id][prop].push(value);
+    }else{
+      collection[id][prop] = [value];
+    }
+  } else if (value !== "") {
+     collection[id][prop] = value;
+  } else {
+    delete collection[id][prop];
+  }
+  return collection;
+}
+updateRecords(5439, "artist", "ABBA");
+```
+
+## 93. Iterate with JavaScript While Loops
+```js
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+var i = 0;
+while(i <= 4) {
+  myArray.push(i);
+  i++;
+}
+```
+
+## 94. Iterate with JavaScript For Loops
+```js
+// Example
+var ourArray = [];
+
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+for (var i = 1; i <= 5; i++) {
+    myArray.push(i);
+}
+```
+
+## 95. Iterate Odd Numbers With a For Loop
+```js
+// Example
+var ourArray = [];
+
+for (var i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+for (var i = 1; i <= 9; i += 2){
+  myArray.push(i);
+}
+```
+
+## 96. Count Backwards With a For Loop
+```js
+// Example
+var ourArray = [];
+
+for (var i = 10; i > 0; i -= 2) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+for (var i = 9; i > 0; i -= 2){
+  myArray.push(i);
+}
+```
+
+## 97. Iterate Through an Array with a For Loop
+```js
+// Example
+var ourArr = [ 9, 10, 11, 12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i++) {
+  ourTotal += ourArr[i];
+}
+
+// Setup
+var myArr = [ 2, 3, 4, 5, 6];
+
+// Only change code below this line
+var total = 0;
+for(var i = 0; i < myArr.length; i++){
+  total += myArr[i];
+}
+```
+
+## 98. Nesting For Loops
+```js
+function multiplyAll(arr) {
+  var product = 1;
+  // Only change code below this line
+  for (var i=0; i < arr.length; i++) {
+    for (var j=0; j < arr[i].length; j++) {
+    product = product * arr[i][j];
+    }
+  }
+  // Only change code above this line
+  return product;
+}
+
+// Modify values below to test your code
+multiplyAll([[1,2],[3,4],[5,6,7]]);
+```
+
+## 99. Iterate with JavaScript Do...While Loops
+```js
+var myArray = [];
+var i = 10;
+
+do {
+ myArray.push(i);
+  i++;
+} while (i < 5);
+```
+
+## 100. Profile Lookup
+```js
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["JavaScript", "Gaming", "Foxes"]
+    }
+];
+
+
+function lookUpProfile(name, prop){
+for(var i = 0; i < contacts.length; i++){
+  var contact = contacts[i];
+  if (contact.firstName === name){
+    if(contact.hasOwnProperty(prop)){
+      return contact[prop];
+    }else {
+      return "No such property";
+    }
+  }
+}
+return "No such contact";
+}
+
+lookUpProfile("Akira", "likes");
+```
+
+## 101. Generate Random Fractions with JavaScript
+```js
+function randomFraction() {
+
+  // Only change code below this line.
+
+  return Math.random();
+}
+
+  // Only change code above this line.
+```
+
+## 102. Generate Random Whole Numbers with JavaScript
+```js
+var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
+```
+
+## 103. Generate Random Whole Numbers within a Range
+```js
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+var myRandom = randomRange(5, 15);
+```
+
+## 104. Use the parseInt Function
+```js
+function convertToInteger(str) {
+  return parseInt(str);
+}
+
+convertToInteger("56");
+```
+
+## 105. Use the parseInt Function with a Radix
+```js
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+convertToInteger("10011");
+```
+
+## 106. Use the Conditional Ternary Operator
+```js
+function checkEqual(a, b) {
+  return a === b ? true : false;
+}
+
+checkEqual(1, 2);
+```
+
+## 107. Use Multiple Conditional (Ternary) Operators
+```js
+function checkSign(num) {
+  return num === 0 ? "zero" : num > 0 ? "positive" : "negative";
+}
+
+checkSign(10);
+```
