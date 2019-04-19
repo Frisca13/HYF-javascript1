@@ -133,8 +133,9 @@ __Swap the Object & the Array__
   let _ = null;
 
   // --- swap below here ---
-
-}
+_ = obj;
+obj = arr;
+arr = _;
 ```
 
 __Complete this code__  
@@ -158,8 +159,8 @@ __Complete this code__
   console.assert(reference_1[0] === reference_2[0]);
 
   // remove the array from memory
-      ; // write this line
-      ; // write this line
+    reference_1 = null; // write this line
+    reference_2 = null; // write this line
 }
 ```
 
