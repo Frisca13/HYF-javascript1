@@ -210,6 +210,29 @@ learning objectives
   console.assert(step_3 === expected, "step_3");
 }
 ```
+#### The Fix
+```js
+{
+  /* values to try
+    "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+  */
+  const a = "", b = "";
+
+  const expected = typeof a === typeof b;
+
+  const val_1 = typeof a;
+  const step_1 = val_1 == typeof b;
+  console.assert(step_1 === expected, "step_1");
+
+  const val_2 = typeof b;
+  const step_2 = val_1 == typeof b;
+  console.assert(step_2 === expected, "step_2");
+
+  const val_3 = val_1 == val_2;
+  const step_3 = val_3;
+  console.assert(step_3 === expected, "step_3");
+}
+```
 
 ### types & casting 2
 
@@ -221,7 +244,7 @@ learning objectives
   /* values to try
     "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
   */
-  const a = , b = ;
+  const a = , b = ; 
 
   const expected = Boolean(a) !== Boolean(b);
 
@@ -235,6 +258,29 @@ learning objectives
 
   const val_3 = ;
   const step_3 = ;
+  console.assert(step_3 === expected, "step_3"); 
+}
+```
+#### The Fix
+```js
+{
+  /* values to try
+    "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+  */
+  const a = "", b = ""; 
+
+  const expected = Boolean(a) !== Boolean(b);
+
+  const val_1 = Boolean(a);
+  const step_1 = val_1 !== Boolean(b);
+  console.assert(step_1 === expected, "step_1");
+
+  const val_2 = Boolean(b);
+  const step_2 = val_1 !== val_2;
+  console.assert(step_2 === expected, "step_2");
+
+  const val_3 = val_1 !== val_2;
+  const step_3 = val_3;
   console.assert(step_3 === expected, "step_3"); 
 }
 ```
@@ -270,6 +316,31 @@ learning objectives
   console.assert(step_4 === expected, "step_4");
 }
 ```
+#### The Fix
+```js
+/* values to try
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = true, b = true;
+
+const expected = Boolean(b) === Boolean(Number(a));
+
+const val_1 = Boolean(b);
+const step_1 = val_1 === Boolean(Number(a));
+console.assert(step_1 === expected, "step_1");
+
+const val_2 = Number(a);
+const step_2 = val_1 === Boolean(val_2);
+console.assert(step_2 === expected, "step_2");
+
+const val_3 = Boolean(val_2);
+const step_3 = val_1 === val_3;
+console.assert(step_3 === expected, "step_3");
+
+const val_4 = val_1 === val_3;
+const step_4 = val_4;
+console.assert(step_4 === expected, "step_4");
+```
 
 [TOP](#operator-precedence)
 
@@ -304,7 +375,9 @@ learning objectives
   console.assert(step_3 === expected, "step_3"); 
 }
 ```
-
+#### The Fix
+```js
+```
 ### logical operators 2
 
 
