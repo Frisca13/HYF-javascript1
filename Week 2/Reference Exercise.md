@@ -283,6 +283,9 @@ __Complete the Assertions__
   console.assert(b_1 /* === or !== ? */ b_2);
 }
 ```
+#### The Fix
+```js
+```
 
 __Complete the Assertions__  
 [on pytut](http://www.pythontutor.com/javascript.html#code=%20%20let%20a_1%20%3D%20%7B%7D%3B%0A%20%20let%20a_2%20%3D%20a_1%3B%0A%20%20console.assert%28a_1%20/*%20%3D%3D%3D%20or%20!%3D%3D%20%3F%20*/%20a_2%29%3B%0A%0A%20%20let%20b_1%20%3D%20%7B%7D%3B%0A%20%20let%20b_2%20%3D%20%7B%7D%3B%0A%20%20console.assert%28b_1%20/*%20%3D%3D%3D%20or%20!%3D%3D%20%3F%20*/%20b_2%29%3B%0A%0A%20%20//%20---%0A%20%20%0A%20%20const%20key%20%3D%20%22x%22%3B%0A%0A%20%20let%20a_1%5Bkey%5D%20%3D%203%3B%0A%20%20let%20a_2%5Bkey%5D%20%3D%203%3B%0A%20%20console.assert%28a_1%20/*%20%3D%3D%3D%20or%20!%3D%3D%20%3F%20*/%20a_2%29%3B%0A%0A%20%20let%20b_1%5Bkey%5D%20%3D%205%3B%0A%20%20let%20b_2%5Bkey%5D%20%3D%205%3B%0A%20%20console.assert%28b_1%20/*%20%3D%3D%3D%20or%20!%3D%3D%20%3F%20*/%20b_2%29%3B&mode=edit&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
@@ -308,6 +311,9 @@ __Complete the Assertions__
   let b_2[key] = 5;
   console.assert(b_1 /* === or !== ? */ b_2);
 }
+```
+#### The Fix
+```js
 ```
 
 __Fill in the Blanks__  
@@ -337,6 +343,9 @@ __Fill in the Blanks__
       ; // write this line
   console.assert(obj_3.x === obj_2[key]);
 }
+```
+#### The Fix
+```js
 ```
 
 [TOP](#reference-type-exercises)
@@ -373,6 +382,9 @@ __Swap 'em__
   const obj_key = ;
   const arr_index = ;
 }
+```
+#### The Fix
+```js
 ```
 
 __Relative vs Absolute__  
