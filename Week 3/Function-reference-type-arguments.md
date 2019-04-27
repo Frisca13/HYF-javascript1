@@ -190,7 +190,22 @@ not the best choice, it can be much more difficult to think about and debug.
   console.assert(array !== by_copy);
 }
 ```
+#### The Fix
+```js
+function copy_array(arr) {
+  // write this using JSON.stringify & .parse
+var array_strified = JSON.stringify(arr);
+    var array_copy = JSON.parse(array_strified);
+    return array_copy;
+ }
 
+const array = ['a', 'b'];
+const by_copy = copy_array(array);
+
+console.assert(array[0] === by_copy[0]);
+console.assert(array[1] === by_copy[1]);
+console.assert(array !== by_copy);
+```
 
 ### start a new array
 
@@ -211,6 +226,24 @@ not the best choice, it can be much more difficult to think about and debug.
   console.assert(array !== by_new_start);
 }
 ```
+#### The Fix
+```js
+function start_new_array(arr) {
+  // write this by building a new array from scratch
+ var new_arr = [];
+    for (var i =0; i <= arr.length - 1; i++) {
+      new_arr.push(arr[i]);
+    }
+    return new_arr;
+  }
+
+const array = ['a', 'b'];
+const by_new_start = start_new_array(array);
+
+console.assert(array[0] === by_new_start[0]);
+console.assert(array[1] === by_new_start[1]);
+console.assert(array !== by_new_start);
+```
 
 ### copy an object
 
@@ -228,6 +261,24 @@ not the best choice, it can be much more difficult to think about and debug.
   console.assert(object['b'] === by_copy['b']);
   console.assert(object !== by_copy);
 }
+```
+#### The Fix
+```js
+function start_new_array(arr) {
+  // write this by building a new array from scratch
+ var new_arr = [];
+    for (var i =0; i <= arr.length - 1; i++) {
+      new_arr.push(arr[i]);
+    }
+    return new_arr;
+  }
+
+const array = ['a', 'b'];
+const by_new_start = start_new_array(array);
+
+console.assert(array[0] === by_new_start[0]);
+console.assert(array[1] === by_new_start[1]);
+console.assert(array !== by_new_start);
 ```
 
 
@@ -250,7 +301,24 @@ not the best choice, it can be much more difficult to think about and debug.
   console.assert(object !== by_new_start);
 }
 ```
+#### The Fix
+```js
+function start_new_object(obj) {
+  // write this by building a new object from scratch
+var new_obj = {};
+    for(let key in obj){
+      new_obj[key] = obj[key];
+    }
+    return new_obj;
+  }
 
+const object = {a: 1, b: 2};
+const by_new_start = start_new_object(object);
+
+console.assert(object.a === by_new_start.a);
+console.assert(object['b'] === by_new_start['b']);
+console.assert(object !== by_new_start);
+```
 
 
 [TOP](#reference-type-arguments)
